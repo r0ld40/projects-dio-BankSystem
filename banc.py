@@ -1,5 +1,5 @@
 saldo = 0
-limite = 500
+limiteSaque = 500
 extrato = ""
 num_saques = 0
 LIMITE = 3
@@ -14,7 +14,7 @@ while True:
 [C] EXTRATO
 [D] SAIR
         
-""")
+>>> """)
     
     if menu == "a" or menu == "A":
         x = float(input("Digite um valor para deposito: R$ "))
@@ -23,10 +23,10 @@ while True:
     elif menu == "b" or menu == "B":
         x = float(input("Digite um valor para saque: R$ "))
 
-        if x > limite or num_saques > LIMITE:
-            print("[ERRO] VALOR INVALIDO OU MAIOR QUE O ESPERADO.")
+        if x > limiteSaque or num_saques > LIMITE:
+            print("[ERRO] LIMITE EXCEDIDO OU VALOR MAIOR QUE O ESPERADO.")
         else:
-            saldo = saldo - x
+            saldo -= x
             num_saques += 1
             extrato += str(f'\n- R$ {x}')
     elif menu == "c" or menu == "C":
