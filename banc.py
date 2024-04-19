@@ -23,7 +23,7 @@ while True:
     elif menu == "b" or menu == "B":
         x = float(input("Digite um valor para saque: R$ "))
 
-        if x > limiteSaque or num_saques > LIMITE:
+        if x > limiteSaque or num_saques > LIMITE or x > saldo:
             print("[ERRO] LIMITE EXCEDIDO OU VALOR MAIOR QUE O ESPERADO.")
         else:
             saldo -= x
